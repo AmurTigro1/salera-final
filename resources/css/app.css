@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* app.css */
+@keyframes start {
+    0% {
+        top: 0px;
+        left: 0px;
+        background-color: blueviolet;
+    }
+    25%{
+        top: 0px;
+        left: 100px;
+        background-color: rgb(15, 0, 148);
+    }
+    50%{
+        top: 100px;
+        left: 100px;
+        background-color: rgb(7, 98, 159);
+    }
+    75%{
+        top: 100px;
+        left: 0px;
+        background-color: rgb(241, 0, 128);
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        background-color: rgb(47, 85, 0);
+    }
+
+}
+
+@keyframes slide {
+   from {
+    transform: translateX(-100px);
+   } 
+   to {
+    transform: translateX(0);
+   }
+}
+@keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+.sa{
+    position:relative;
+    animation: start 2s ease-in-out  infinite;
+}
+
+/* .containerr {
+    animation: slide .6s ease-in 0.4s 1 normal both;
+    transform: translateX(-150px);
+} */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .plant {
+    animation: slideIn 1s ease-in-out;
+}
+.card {
+    animation: zoomIn 1s ease-in-out;
+}
